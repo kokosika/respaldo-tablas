@@ -8,7 +8,7 @@ import java.util.Set;
 @Entity(name = "CLIENT")
 public class ClientEntity {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "client")

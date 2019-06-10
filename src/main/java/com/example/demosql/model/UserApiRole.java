@@ -7,7 +7,7 @@ import java.util.Date;
 public class UserApiRole {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Temporal(TemporalType.DATE)
     private Date createdDate;

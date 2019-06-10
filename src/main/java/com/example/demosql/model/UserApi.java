@@ -9,11 +9,11 @@ import java.util.Set;
 @Entity(name = "USER_API")
 public class UserApi {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     @Column(length = 100, unique = true, nullable = false)
     private String username;
-    @Column(length = 100,  nullable = false)
+    @Column(length = 100,  nullable = true)
     private String password;
     @Column(nullable = false)
     private Boolean enabled;
