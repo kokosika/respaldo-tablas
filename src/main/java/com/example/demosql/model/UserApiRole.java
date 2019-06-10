@@ -1,6 +1,7 @@
 package com.example.demosql.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity(name = "user_api_role")
 public class UserApiRole {
@@ -8,7 +9,8 @@ public class UserApiRole {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-
+    @Temporal(TemporalType.DATE)
+    private Date createdDate;
     @JoinColumn(referencedColumnName = "id", name = "id_user_api")
     @ManyToOne(optional = false)
     private UserApi userApi;
